@@ -4,15 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chat Anônimo</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <div class="chat-container">
-        <h2>Chat Anônimo</h2>
+        <header>
+            <h2>Chat Anônimo</h2>
+            <p>Envie sua mensagem de forma anônima!</p>
+        </header>
         <div id="messages" class="messages"></div>
-        <input type="text" id="messageInput" placeholder="Digite sua mensagem...">
-        <button id="sendButton">Enviar</button>
+        <div class="input-container">
+            <input type="text" id="nameInput" placeholder="Seu nome (opcional)" autocomplete="off">
+            <input type="text" id="messageInput" placeholder="Digite sua mensagem..." maxlength="200" autocomplete="off">
+            <button id="sendButton">Enviar</button>
+            <button id="emojiButton">😊</button>
+            <button id="clearButton">Limpar Chat</button>
+        </div>
+        <div id="feedback" class="feedback"></div>
+        <div id="messageCount" class="message-count">Total de mensagens: 0</div>
+        <button id="themeToggle">Tema Escuro</button>
     </div>
-    <script src="script.js"></script>
+    <audio id="sendSound" src="send-sound.mp3" preload="auto"></audio> <!-- Adicione um arquivo de som -->
+    <script src="index.js"></script>
 </body>
 </html>
